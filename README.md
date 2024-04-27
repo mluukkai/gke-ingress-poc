@@ -7,3 +7,7 @@ See
 - https://cloud.google.com/kubernetes-engine/docs/concepts/ingress#interpreted_hc
 
 You need to do it like this https://github.com/mluukkai/gke-ingress-poc/blob/main/manifests/service.yaml
+
+### repro the problem
+
+Remove the BackendConfig and enable just one pod (by curl http://pod-ip-address/flip ): both will get traffic through ingress
