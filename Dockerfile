@@ -14,4 +14,4 @@ EXPOSE 3000
 
 CMD [ "node", "index.js" ]
 
-# TAG=v3 && docker build --platform linux/amd64 -t mluukkai/poc:$TAG . && docker push mluukkai/poc:$TAG
+# TAG=v4 && docker build --platform linux/amd64 -t mluukkai/poc:$TAG . && docker push mluukkai/poc:$TAG

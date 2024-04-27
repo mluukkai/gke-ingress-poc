@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
         - name: ping-pong
-          image: mluukkai/poc:v3
-          command: ["node", "index.js"]
+          image: mluukkai/poc:v4
           readinessProbe:
             httpGet:
               path: /healthz

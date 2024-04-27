@@ -15,8 +15,9 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/flip', async (req, res) => {
-  console.log('/flip', isBroken(), ip.address())
+  console.log('/flip, now', isBroken(), ip.address())
   broken = !broken;
+  console.log('/flip changed to', isBroken(), ip.address())
   res.send('is broken: ' + true + ' '+ ip.address());
 });
 
