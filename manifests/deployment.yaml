@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: poc-dep
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: poc
+  template:
+    metadata:
+      labels:
+        app: poc
+    spec:
+      containers:
+        - name: ping-pong
+          image: mluukkai/poc:v3
+          command: ["node", "index.js"]
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 80
