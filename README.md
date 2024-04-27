@@ -1,6 +1,6 @@
-## GKE ingress and pod health checks
+## GKE ingress and pod readiness
 
-GKE ingress does not respect the readiness and liveness probes of pods if there is more that 1 pod. BackendConfig must be used.
+GKE ingress does not respect the readiness probes of pods if there are more than 1 pod. BackendConfig must be used.
 
 See 
 - https://stackoverflow.com/questions/70670084/configuring-the-health-check-of-a-kubernetes-ingress-with-terraform
